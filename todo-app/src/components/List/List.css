@@ -1,0 +1,77 @@
+.list {
+  margin-bottom: 30px;
+}
+
+.list__add-button svg, .list__add-button span {
+  opacity: 0.4;
+}
+
+.list__add-button:hover svg, .list__add-button:hover span {
+  opacity: 0.2;
+}
+
+.list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 12px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.list li .active {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.list li:hover .list__remove-icon {
+  opacity: 0.3;
+}
+
+.list li .list__remove-icon {
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+  opacity: 0;
+}
+
+.list li .list__remove-icon:hover {
+  opacity: 0.8;
+}
+
+.list li span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 160px;
+  white-space: nowrap;
+}
+
+.list li:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.list li .badge {
+  left: 5px;
+  position: relative;
+}
+
+.list li i {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.list li i img {
+  opacity: 0.6;
+}
+/*# sourceMappingURL=List.css.map */
