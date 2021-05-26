@@ -19,7 +19,7 @@ function App() {
     // axios.get('http://localhost:3000/db.json').then(({data}) => 
     //   setPizzas(data.pizzas)
     // );
-    fetch('http://localhost:3000/db.json').then((resp) => resp.json()).then((json) => dispatch(setPizzas(json.pizzas)));
+    fetch('http://localhost:3001/pizzas').then((resp) => resp.json()).then((json) => dispatch(setPizzas(json)));
   }, []);
 
   return (
