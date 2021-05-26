@@ -7,7 +7,7 @@ import {useDispatch} from 'react-redux';
 
 import {Header, PizzaBlock} from './components';
 import {Home, Cart} from './pages';
-import {setPizzas} from './redux/actions/pizzas';
+import {fetchPizzas} from './redux/actions/pizzas';
 
 
 
@@ -16,10 +16,11 @@ function App() {
 
 
   useEffect(() => {
+
+    dispatch(fetchPizzas());
     // axios.get('http://localhost:3000/db.json').then(({data}) => 
     //   setPizzas(data.pizzas)
     // );
-    fetch('http://localhost:3000/db.json').then((resp) => resp.json()).then((json) => dispatch(setPizzas(json.pizzas)));
   }, []);
 
   return (
