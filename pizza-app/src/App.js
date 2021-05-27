@@ -1,27 +1,14 @@
-import {React, useState, useEffect, useRef} from 'react';
+import {React} from 'react';
 import {Route} from 'react-router-dom';
-import { createStore } from 'redux';
 import axios from 'axios';
-import store from './redux/store';
-import {useDispatch} from 'react-redux';
 
-import {Header, PizzaBlock} from './components';
+import {Header} from './components';
 import {Home, Cart} from './pages';
-import {fetchPizzas} from './redux/actions/pizzas';
 
 
 
 function App() {
-  const dispatch = useDispatch();
-
-
-  useEffect(() => {
-
-    dispatch(fetchPizzas());
-    // axios.get('http://localhost:3000/db.json').then(({data}) => 
-    //   setPizzas(data.pizzas)
-    // );
-  }, []);
+  
 
   return (
     <div className="App">
